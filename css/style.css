@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	font-family: serif;
+	background-color: #212121;
+}
+
+section {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+  text-align: center;
+}
+
+nav {
+  line-height: 30px;
+  padding: 50px;
+  text-align: center;
+}
+
+a:link, a:visited {
+  width: 100px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  font-family: 'Lilita One', cursive;
+  font-size: 25px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#text {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  text-align: center; 
+}
+
+#grayscale img { /*this block of code creates the grayscale effect for my images*/
+  filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    -webkit-transition: all .5s ease;/*this is how fast the transition is from black and white to color*/
+}
+
+#grayscale img:hover { /*when you hover over the images it will change to colour*/
+  filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+div.gallery { /*this makes them seperate into indiviaul boxes*/
+    margin: 20px;
+    float: left; /*the direction the boxes goes*/
+    width: 450px;
+}
+
+div.gallery img {
+    width: 75%; /*this is what makes the image fit in the box*/
+    height: auto;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: none;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}

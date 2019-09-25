@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<nav>
+		<a href="index.html">HOME</a>
+		<a href="page1.html">ABOUT</a>
+		<a href="page2.html">GALLERY </a>
+	</nav>
+
+	<section>
+		<div id="text">
+			<h1>Interactive 3D Model</h1>
+
+			<div class="sketchfab-embed-wrapper">
+				<iframe title="A 3D model" width="940" height="780" src="https://sketchfab.com/models/4378e4102bd44c099ab3e301126a0534/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			</div>
+
+			<p>This is an abstract lamp. This lamp is balance but asymmetrical in shape, each part of the lamp is not the same which makes it unique.</p>
+
+			<p>You can view the shape of this lamp by in 3D above.</p>
+
+			<h1>Rendered Lamp Images</h1>
+			</div>
+
+			<div class="row">
+				<div class="column">
+					<img src="img/image1.jpg"style="width:75%" onclick="myFunction(this);">
+				</div>
+
+				<div class="column">
+					<img src="img/image2.jpg" style="width:75%" onclick="myFunction(this);">
+				</div>
+
+				<div class="column">
+					<img src="img/image3.jpg" style="width:75%" onclick="myFunction(this);">
+				</div>
+
+				<div class="column">
+					<img src="img/image4.jpg" style="width:75%" onclick="myFunction(this);">
+				</div>
+			</div>
+
+			<div class="container">
+				<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+				<img id="expandedImg" style="width:75%">
+				<div id="imgtext"></div>
+			</div>
+		</section>
+
+		<script>
+			function myFunction(imgs) {
+				var expandImg = document.getElementById("expandedImg");
+				var imgText = document.getElementById("imgtext");
+				expandImg.src = imgs.src;
+				imgText.innerHTML = imgs.alt;
+				expandImg.parentElement.style.display = "block";
+			}
+		</script>
+	
+</body>
+</html>
